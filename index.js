@@ -127,6 +127,25 @@ gsap.utils.toArray('[animation="scroll"]').forEach((element) => {
   );
 });
 
+// When the window is scrolled
+window.addEventListener("scroll", function () {
+  // Get all elements with the attribute animation="parallax"
+  var parallaxElements = document.querySelectorAll('[animation="parallax"]');
+
+  parallaxElements.forEach(function (element) {
+    // Calculate the parallax effect based on the scroll position
+    var parallaxAmount = window.scrollY * 0.5;
+
+    // Use GSAP to animate the element
+    gsap.to(element, {
+      y: parallaxAmount, // Adjust the y position of the element
+      ease: "none", // No easing to ensure a smooth parallax effect
+      overwrite: "auto" // Overwrite any existing animations on the element
+    });
+  });
+});
+
+
 // Shows the current year in footer
 window.onload = function () {
   const year = new Date().getFullYear();
