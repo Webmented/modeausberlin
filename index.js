@@ -75,7 +75,7 @@ document.querySelectorAll('[swiper="2"]').forEach((sliderComponent) => {
   const paginationEl = sliderComponent.querySelector('[swiper="pagination"]');
 
   new Swiper(sliderEl, {
-    slidesPerView: 6.5,
+    slidesPerView: 2.5,
     spaceBetween: 16,
     direction: 'horizontal',
     rewind: true,
@@ -89,7 +89,7 @@ document.querySelectorAll('[swiper="2"]').forEach((sliderComponent) => {
     breakpoints: {
       // when window width is >= 768px
       768: {
-        slidesPerView: 3.5,
+        slidesPerView: 4.5,
         spaceBetween: 24,
       },
     },
